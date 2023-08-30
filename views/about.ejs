@@ -1,0 +1,75 @@
+<div>
+    <div>
+        <img src="/img/auto.jpg" alt="ProfilePicture" class="about_picture">
+    </div>
+
+    <div>
+        <h3>
+            ## About Me
+        </h3>
+
+
+        Welcome to my personal blog! I'm Shreyas D, with a passion for creative everything. Through this blog, I aim to share my thoughts, and insights on various experiences throughout . Whether it's building websites, interactive visualizations , or just hobbies an cool things, you'll find a variety of content that I hope will both entertain and inform you.
+
+
+       <h3>
+           ### My Journey
+       </h3>
+
+        I have always been fascinated by web capabilities . This blog serves as a platform to document my journey and connect with like-minded individuals who share my enthusiasm.
+
+        <h3>
+            ### What to Expect
+        </h3>
+
+
+        I believe in curios minds wanting to start something beyond what they "normally except". Whether you're a reaching for resources or experiences to start  , there's might be something here for you.
+
+        <h3>
+            ## Let's Connect!
+        </h3>
+
+
+        I'm excited to have you join me on this adventure. Don't hesitate to [How Readers Can Get in Touch with You]. Feel free to leave comments, ask questions, and engage in discussions. Let's learn and grow together!
+
+        Thanks for stopping by, and I hope you enjoy your time here!
+
+        [Your Social Media Links or Contact Information]
+    </div>
+
+
+
+</div>
+
+<div id="three-container">
+    <script type="module">
+        <h2>reach</h2>
+        import * as THREE from 'three';
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        // document.body.appendChild( renderer.domElement );
+        document.getElementById('three-container').appendChild(renderer.domElement);
+
+        const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+        const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+        const cube = new THREE.Mesh( geometry, material );
+        scene.add( cube );
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame( animate );
+
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+
+            renderer.render( scene, camera );
+        }
+
+        animate();
+    </script>
+</div>
